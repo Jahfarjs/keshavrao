@@ -29,7 +29,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-cosmic-deep/80 backdrop-blur-md border-b border-mystic-gold/10 py-3 shadow-lg'
+          ? 'bg-cosmic-deep/80 backdrop-blur-md border-b border-mystic-red/10 py-3 shadow-lg'
           : 'bg-transparent py-5'
       }`}
     >
@@ -39,7 +39,7 @@ export default function Navbar() {
               <div className="h-10 md:h-12 flex items-center">
                 <img
                   src="/Keshavrao Astrocentre logo.png"
-                  alt="Keshavrao Astrocentre Logo"
+                  alt="Keshavrao Astro Centre Logo"
                   className="h-full w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity duration-300"
                   onError={(e) => {
                     // Fallback if image fails to load
@@ -47,7 +47,7 @@ export default function Navbar() {
                     e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div className="hidden items-center gap-2 text-mystic-gold">
+                <div className="hidden items-center gap-2 text-mystic-red">
                   <Compass className="w-8 h-8 animate-spin-slow" />
                   <span className="font-serif text-lg font-bold">KESHAVRAO</span>
                 </div>
@@ -60,16 +60,16 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium tracking-wide text-gray-300 hover:text-mystic-gold hover:translate-y-[-1px] transition-all duration-200"
+                className="text-sm font-medium tracking-wide text-gray-300 hover:text-mystic-red hover:translate-y-[-1px] transition-all duration-200"
               >
                 {link.name}
               </a>
             ))}
             <a
-              href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astrocentre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
+              href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-mystic-gold bg-mystic-gold/10 text-mystic-gold font-semibold text-sm hover:bg-mystic-gold hover:text-cosmic-dark transition-all duration-300 shadow-[0_0_15px_rgba(255,184,80,0.1)] hover:shadow-[0_0_20px_rgba(255,184,80,0.25)]"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-mystic-red bg-mystic-red/10 text-mystic-red font-semibold text-sm hover:bg-mystic-red hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(220,38,38,0.15)] hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
             >
               <Phone className="w-4 h-4" />
               Book Consult
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-400 hover:text-mystic-gold focus:outline-none transition-colors"
+              className="p-2 rounded-md text-gray-400 hover:text-mystic-red focus:outline-none transition-colors"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -101,17 +101,17 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium text-gray-300 hover:text-mystic-gold py-2 block w-full text-center transition-colors"
+              className="text-lg font-medium text-gray-300 hover:text-mystic-red py-2 block w-full text-center transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a
-            href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astrocentre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
+            href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
-            className="w-full max-w-[280px] mt-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-mystic-gold text-cosmic-dark font-bold hover:bg-mystic-gold-light transition-all duration-300 text-center shadow-lg"
+            className="w-full max-w-[280px] mt-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-mystic-red text-white font-bold hover:bg-mystic-red-light transition-all duration-300 text-center shadow-lg"
           >
             <Phone className="w-5 h-5" />
             Book Consultation

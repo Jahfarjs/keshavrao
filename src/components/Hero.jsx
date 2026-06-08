@@ -6,13 +6,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-radial from-cosmic-accent/30 via-cosmic-deep to-cosmic-deep"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-radial from-cosmic-accent/40 via-cosmic-deep to-cosmic-deep"
     >
       {/* Mystical Floating Celestial Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         {/* Glowing nebulas */}
-        <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-mystic-gold/5 blur-[100px] animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-purple-900/10 blur-[120px] animate-pulse-slow" />
+        <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-mystic-red/5 blur-[100px] animate-pulse-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-red-950/10 blur-[120px] animate-pulse-slow" />
         
         {/* Floating Constellation Stars */}
         {[...Array(20)].map((_, i) => (
@@ -45,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mystic-gold/10 border border-mystic-gold/20 text-mystic-gold text-xs font-semibold tracking-wider uppercase mb-6 shadow-[0_0_15px_rgba(255,184,80,0.05)]"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-mystic-red/10 border border-mystic-red/20 text-mystic-red text-xs font-semibold tracking-wider uppercase mb-6 shadow-[0_0_15px_rgba(220,38,38,0.05)]"
         >
           <Sparkles className="w-3.5 h-3.5" />
           Bengaluru's Premier Vedic Astrology Centre
@@ -58,9 +58,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight max-w-5xl mx-auto leading-tight"
         >
-          Align Your Life with{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-mystic-gold via-mystic-gold-light to-white">
-            Vedic Wisdom
+          Discover Clarity, Confidence & Direction Through{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-mystic-red via-mystic-red-light to-white">
+            Vedic Astrology
           </span>
         </motion.h1>
 
@@ -71,7 +71,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed font-light"
         >
-          Over 25 years of divine guidance. Get accurate predictions & powerful ancient remedies for your love marriage, career obstacles, family disputes, and complete protection from negative energies.
+          Receive personalized astrological guidance for career, marriage, business, health, and life decisions. Consult the most trusted Vedic Astrologer in Bengaluru for precise horoscope analysis, marriage compatibility solutions, and negative energy protection.
         </motion.p>
 
         {/* Actions */}
@@ -82,21 +82,21 @@ export default function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
         >
           <a
-            href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astrocentre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystic-gold text-cosmic-dark font-bold text-base hover:bg-mystic-gold-light transition-all duration-300 shadow-[0_0_30px_rgba(255,184,80,0.2)] hover:scale-105"
+            href="tel:+919740693845"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-mystic-red text-white font-bold text-base hover:bg-mystic-red-light transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.35)] hover:scale-105"
           >
-            <MessageSquare className="w-5 h-5 fill-current" />
-            WhatsApp Consultation
+            <Phone className="w-5 h-5" />
+            Book Consultation
           </a>
           
           <a
-            href="tel:+919740693845"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-mystic-gold bg-transparent text-mystic-gold font-bold text-base hover:bg-mystic-gold/10 transition-all duration-300 hover:scale-105"
+            href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-mystic-red bg-transparent text-mystic-red font-bold text-base hover:bg-mystic-red/10 transition-all duration-300 hover:scale-105"
           >
-            <Phone className="w-5 h-5" />
-            Call Now: 9740693845
+            <MessageSquare className="w-5 h-5 fill-current" />
+            Chat on WhatsApp
           </a>
         </motion.div>
 
@@ -108,13 +108,13 @@ export default function Hero() {
           className="mt-16 relative w-64 h-36 sm:w-80 sm:h-44 mx-auto animate-float"
         >
           {/* Pulsing card border glow */}
-          <div className="absolute inset-0 rounded-2xl border border-mystic-gold/20 animate-pulse-slow" />
+          <div className="absolute inset-0 rounded-2xl border border-mystic-red/20 animate-pulse-slow" />
           
           {/* Glass background container */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-mystic-gold/40 p-3 bg-gradient-to-b from-cosmic-accent/80 to-cosmic-deep/90 shadow-[0_0_40px_rgba(255,184,80,0.15)] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 rounded-2xl border-2 border-mystic-red/40 p-3 bg-gradient-to-b from-cosmic-accent/80 to-cosmic-deep/90 shadow-[0_0_40px_rgba(220,38,38,0.15)] flex items-center justify-center overflow-hidden">
             <img
               src="/Keshavrao Astrocentre logo.jpg"
-              alt="Keshavrao Astrocentre Logo"
+              alt="Keshavrao Astro Centre Logo"
               className="w-full h-full object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
@@ -125,23 +125,23 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-mystic-gold/10 max-w-5xl mx-auto text-center"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-mystic-red/10 max-w-5xl mx-auto text-center"
         >
           <div>
-            <div className="text-2xl sm:text-3xl font-bold text-mystic-gold font-serif">25+</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Years of Vedic Mastery</div>
+            <div className="text-2xl sm:text-3xl font-bold text-mystic-red font-serif">25+ Years</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">Years of Experience</div>
           </div>
           <div>
-            <div className="text-2xl sm:text-3xl font-bold text-mystic-gold font-serif">100%</div>
+            <div className="text-2xl sm:text-3xl font-bold text-mystic-red font-serif">12,000+</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">Consultations Completed</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-mystic-red font-serif">99.8%</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">Client Satisfaction</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-mystic-red font-serif">100%</div>
             <div className="text-xs sm:text-sm text-gray-400 mt-1">Confidential & Safe</div>
-          </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-bold text-mystic-gold font-serif">12,000+</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Happy Clients</div>
-          </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-bold text-mystic-gold font-serif">Bengaluru</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Top-Rated Centre</div>
           </div>
         </motion.div>
       </div>

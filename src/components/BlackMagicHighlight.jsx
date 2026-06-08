@@ -29,7 +29,7 @@ export default function BlackMagicHighlight() {
       desc: 'Powerful ancient fire rituals (Homas) to completely neutralize the negative energy roots.',
     },
     {
-      icon: <EyeOff className="w-6 h-6 text-mystic-gold" />,
+      icon: <EyeOff className="w-6 h-6 text-mystic-red" />,
       title: 'Drishti (Evil Eye) Cleansing',
       desc: 'Purification techniques to strip away jealousy-induced blockages on your growth.',
     },
@@ -58,7 +58,7 @@ export default function BlackMagicHighlight() {
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Black Magic Removal &{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-400 to-mystic-gold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-mystic-gold">
               Negative Energy Protection
             </span>
           </h2>
@@ -80,11 +80,20 @@ export default function BlackMagicHighlight() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-cosmic-accent/30 backdrop-blur-sm p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition-all duration-300 group shadow-md"
+                className="bg-cosmic-accent/30 backdrop-blur-sm p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition-all duration-300 group shadow-md flex flex-col"
               >
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 font-bold mb-4 font-serif text-lg group-hover:bg-red-500/20 transition-all duration-300">
-                  0{idx + 1}
+                {/* Placeholder Image using fav.png */}
+                <div className="relative w-full h-32 rounded-xl overflow-hidden mb-4 bg-black/40 border border-red-500/10 flex items-center justify-center">
+                  <img
+                    src="/fav.png"
+                    alt={symptom.title}
+                    className="w-16 h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter drop-shadow-[0_0_8px_rgba(220,38,38,0.3)]"
+                  />
+                  <div className="absolute top-2 right-2 w-7 h-7 rounded-lg bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 font-serif text-xs font-bold">
+                    0{idx + 1}
+                  </div>
                 </div>
+                
                 <h4 className="text-white font-semibold text-lg font-serif tracking-wide">
                   {symptom.title}
                 </h4>
@@ -97,12 +106,12 @@ export default function BlackMagicHighlight() {
         </div>
 
         {/* Dynamic Remedy Panel */}
-        <div className="mt-16 bg-gradient-to-br from-cosmic-accent/40 to-cosmic-dark/80 rounded-3xl border border-mystic-gold/20 p-6 sm:p-10 lg:p-12 shadow-[0_0_30px_rgba(255,184,80,0.05)]">
+        <div className="mt-16 bg-gradient-to-br from-cosmic-accent/40 to-cosmic-dark/80 rounded-3xl border border-mystic-red/20 p-6 sm:p-10 lg:p-12 shadow-[0_0_30px_rgba(220,38,38,0.05)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Explanatory text */}
             <div className="lg:col-span-7 space-y-6">
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide">
-                How Keshavrao Astrocentre Restores Peace
+                How Keshavrao Astro Centre Restores Peace
               </h3>
               <p className="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
                 Led by expert Vedic practitioners, we combine meticulous horoscope analysis with specific scripture-ordained remedies. We identify the source of the curse or negative aura and execute divine protection protocols to restore harmony to your life and household.
@@ -111,7 +120,7 @@ export default function BlackMagicHighlight() {
               <div className="space-y-4">
                 {remedies.map((remedy, idx) => (
                   <div key={idx} className="flex gap-4 items-start">
-                    <div className="mt-1 p-2 rounded-lg bg-cosmic-dark border border-mystic-gold/10 flex-shrink-0">
+                    <div className="mt-1 p-2 rounded-lg bg-cosmic-dark border border-mystic-red/10 flex-shrink-0">
                       {remedy.icon}
                     </div>
                     <div>
@@ -141,7 +150,7 @@ export default function BlackMagicHighlight() {
               </p>
               
               <a
-                href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astrocentre%2C%20I%20have%20an%20urgent%20need%20regarding%20negative%20energy%20cleansing%20and%20black%20magic%20removal."
+                href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20have%20an%20urgent%20need%20regarding%20negative%20energy%20cleansing%20and%20black%20magic%20removal."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-sm sm:text-base tracking-wide transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:scale-105"
