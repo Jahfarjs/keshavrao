@@ -54,10 +54,10 @@ export default function About() {
               </p>
               
               <div className="mt-8 border-t border-mystic-red/10 pt-6 space-y-4">
-                <div className="flex items-center gap-3 text-left">
+                {/* <div className="flex items-center gap-3 text-left">
                   <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
                   <span className="text-gray-300 text-sm">Z News Award Nominated Vedic Centre</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3 text-left">
                   <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
                   <span className="text-gray-300 text-sm">4.9/5 Average Client Rating</span>
