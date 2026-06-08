@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Heart, Sparkles, Briefcase, DollarSign, Users, Flame, Home, Gem, ArrowRight, MessageSquare 
+  Heart, Sparkles, Briefcase, DollarSign, Users, Flame, Home, Gem, ArrowRight, MessageSquare, Compass
 } from 'lucide-react';
 
 export default function Services() {
@@ -46,6 +46,11 @@ export default function Services() {
       title: 'Gemstone & Numerology Therapy',
       desc: 'Boost your luck and cosmic energy. Get authentic gemstone recommendations based on your birth chart along with name corrections to remove negative blocks.',
     },
+    {
+      icon: <Compass className="w-5 h-5 text-rose-400" />,
+      title: 'Vashikaran & Love Attraction',
+      desc: 'Traditional Vashikaran guidance rooted in astrological and spiritual practices. Personalized consultations are designed to help individuals address relationship concerns, improve communication, foster harmony, and gain clarity in matters of love and personal connections through time-honored wisdom.',
+    },
   ];
 
   return (
@@ -72,7 +77,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesList.map((service, idx) => (
             <motion.div
               key={idx}
@@ -90,9 +95,6 @@ export default function Services() {
                     alt={service.title}
                     className="w-16 h-16 object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter drop-shadow-[0_0_8px_rgba(220,38,38,0.25)]"
                   />
-                  <div className="absolute top-3 left-3 w-9 h-9 rounded-lg bg-cosmic-accent/65 border border-mystic-red/15 flex items-center justify-center">
-                    {service.icon}
-                  </div>
                 </div>
 
                 <h3 className="font-serif font-bold text-lg text-white tracking-wide">
