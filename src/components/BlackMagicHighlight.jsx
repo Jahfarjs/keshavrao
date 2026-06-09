@@ -6,18 +6,22 @@ export default function BlackMagicHighlight() {
   const symptoms = [
     {
       title: 'Unexplained Stagnation',
+      image: '/unexpected-stagnation.webp',
       desc: 'Sudden, severe collapse in business or career, even when executing everything correctly.',
     },
     {
       title: 'Persistent Family Discord',
+      image: '/persistent-family-discord.webp',
       desc: 'Frequent, aggressive arguments and misunderstandings between couples or family members.',
     },
     {
       title: 'Chronic Fatigue & Anxiety',
+      image: '/chronic-fatigue.webp',
       desc: 'Waking up exhausted, feeling heavy, having bad dreams, or experiencing sudden panic attacks.',
     },
     {
       title: 'Vastu & Home Heaviness',
+      image: '/home-heavyness.webp',
       desc: 'A persistent feeling of negative presence, cold spots, or a suffocating atmosphere at home.',
     },
   ];
@@ -82,14 +86,17 @@ export default function BlackMagicHighlight() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="bg-cosmic-accent/30 backdrop-blur-sm p-6 rounded-2xl border border-red-500/10 hover:border-red-500/30 transition-all duration-300 group shadow-md flex flex-col"
               >
-                {/* Placeholder Image using fav.png */}
-                <div className="relative w-full h-32 rounded-xl overflow-hidden mb-4 bg-black/40 border border-red-500/10 flex items-center justify-center">
+                {/* Symptom image with cover fit */}
+                <div className="relative w-full h-36 rounded-xl overflow-hidden mb-4 bg-black/40 border border-red-500/10 group-hover:border-red-500/30 transition-all">
                   <img
-                    src="/fav.png"
+                    src={symptom.image}
                     alt={symptom.title}
-                    className="w-16 h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter drop-shadow-[0_0_8px_rgba(220,38,38,0.3)]"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
-                  <div className="absolute top-2 right-2 w-7 h-7 rounded-lg bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 font-serif text-xs font-bold">
+                  {/* Vignette overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                  
+                  <div className="absolute top-2 right-2 w-7 h-7 rounded-lg bg-red-950/80 backdrop-blur-md border border-red-500/30 flex items-center justify-center text-red-400 font-serif text-xs font-bold">
                     0{idx + 1}
                   </div>
                 </div>

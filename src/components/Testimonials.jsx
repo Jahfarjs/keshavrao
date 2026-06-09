@@ -5,31 +5,31 @@ import { Star, Quote, MessageSquare } from 'lucide-react';
 export default function Testimonials() {
   const reviews = [
     {
-      name: "Ramesh Kumar",
-      location: "Rajajinagar, Bengaluru",
-      service: "Love Marriage & Compatibility",
-      text: "We were facing severe opposition from our families regarding our marriage. Keshavrao Astro Centre analyzed our charts, suggested a few simple remedies, and within 3 months, our families agreed. The guidance was highly professional and compassionate.",
-      rating: 5,
-    },
-    {
-      name: "Priyanka S.",
+      name: "Arjun Sharma",
       location: "Jayanagar, Bengaluru",
+      service: "Love Marriage & Compatibility",
+      text: "Our relationship faced several obstacles, and gaining family approval seemed difficult. The consultation at Keshavrao Astro Centre gave us clarity, confidence, and simple remedies to follow. Gradually, circumstances changed in our favor, and our families became supportive of our decision. We are grateful for the guidance and encouragement we received during this important phase of our lives.",
+      rating: 5,
+    },
+    {
+      name: "Meera Reddy",
+      location: "Vijayanagar, Bengaluru",
       service: "Negative Energy Removal",
-      text: "Our business was experiencing a sudden, major downfall with no logical reason. We felt a heavy, stressful aura at our shop. After the Evil Eye cleansing homa and installing the Raksha Yantra, our sales returned to normal. Highly recommended for spiritual protection.",
+      text: "⁠Our business was facing unexpected challenges, and despite our best efforts, progress had slowed considerably. We approached Keshavrao Astro Centre for guidance and followed the recommended spiritual remedies. Over time, we noticed a positive shift in the atmosphere and a steady improvement in business performance. The experience brought us renewed confidence and peace of mind.",
       rating: 5,
     },
     {
-      name: "Ananth Prasad",
-      location: "Malleshwaram, Bengaluru",
+      name: "Rahul Desai",
+      location: "Indiranagar, Bengaluru",
       service: "Career & Finance Consultation",
-      text: "I was stuck in a stagnant job for over 4 years. The gemstone consultation and birth chart analysis helped me understand my planetary positions. Following their name correction and gemstone suggestions, I cleared an interview at a top MNC within a month.",
+      text: "For several years, I felt my career growth had come to a standstill despite putting in consistent effort. Seeking guidance from Keshavrao Astro Centre gave me a fresh perspective on my strengths and opportunities. After following their personalized recommendations, I noticed positive changes in my confidence and professional journey. Soon after, I secured an excellent opportunity with a reputed company. I’m grateful for the clarity and direction I received.",
       rating: 5,
     },
     {
-      name: "Deepa Hegde",
-      location: "Whitefield, Bengaluru",
+      name: "Shalini Rao",
+      location: "Basavanagudi, Bengaluru",
       service: "Kundli Matching & Dosha Remedy",
-      text: "They checked the horoscope compatibility for my daughter. They identified a minor Nadi Dosha and provided practical, scriptural remedial steps to perform. Their transparency and deep knowledge gave us immense peace of mind.",
+      text: "We consulted Keshavrao Astro Centre while evaluating a marriage proposal for our family. Their detailed horoscope analysis highlighted important factors that needed attention and they explained everything with clarity and patience. The suggested remedies were simple to follow and rooted in traditional wisdom. Their honest approach and expert guidance helped us move forward with confidence and reassurance.",
       rating: 5,
     }
   ];
