@@ -9,46 +9,55 @@ export default function Services() {
     {
       icon: <Heart className="w-5 h-5 text-red-400" />,
       title: 'Love Marriage & Relationships',
+      image: '/01 - Love Marriage & Relationships.webp',
       desc: 'Find harmony and overcome parental or societal objections in love marriage. Secure alignment, mutual understanding, and compatibility through Vedic remedies.',
     },
     {
       icon: <Sparkles className="w-5 h-5 text-yellow-400" />,
       title: 'Kundli & Jataka Matching',
+      image: '/02 - Kundli & Jataka Matching.webp',
       desc: 'Ensure long-term marriage compatibility. Get detailed Kundli Analysis checking for Guna matching, Dosha detection, and astrological solutions for a happy married life.',
     },
     {
       icon: <Briefcase className="w-5 h-5 text-blue-400" />,
       title: 'Career & Business Problems',
+      image: '/03 - Career & Business Problems.webp',
       desc: 'Unlock career growth and business success. Gain clear insights into planetary obstacles to choose the right career path, job transition, and financial stability.',
     },
     {
       icon: <DollarSign className="w-5 h-5 text-emerald-400" />,
       title: 'Finance & Debt Solutions',
+      image: '/04 - Finance & Debt Solutions.webp',
       desc: 'Identify planetary causes behind financial distress. Learn powerful remedial options to overcome debt, attract wealth, and achieve stable financial returns.',
     },
     {
       icon: <Users className="w-5 h-5 text-purple-400" />,
       title: 'Family & Children Disputes',
+      image: '/05 - Family & Children Disputes.webp',
       desc: 'Restore domestic peace and resolve child-related obstacles. End disputes, strengthen familial bonds, and guide children toward educational excellence.',
     },
     {
       icon: <Flame className="w-5 h-5 text-orange-400" />,
       title: 'Nadi & Mangal Dosha Remedies',
+      image: '/06 - Nadi & Mangal Dosha Remedies.webp',
       desc: 'Neutralize harmful planetary influences that cause marriage delays or marital disharmony. Implement Vedic remedies for positive cosmic energy.',
     },
     {
       icon: <Home className="w-5 h-5 text-cyan-400" />,
       title: 'Vastu Shastra Consultation',
+      image: '/07 - Vastu Shastra Consultation.webp',
       desc: 'Align your home or office with structural energy flow to welcome wealth, health, and prosperity. Eliminate Vastu Dosha through practical, non-destructive remedies.',
     },
     {
       icon: <Gem className="w-5 h-5 text-indigo-400" />,
       title: 'Gemstone & Numerology Therapy',
+      image: '/08 - Gemstone & Numerology Therapy.webp',
       desc: 'Boost your luck and cosmic energy. Get authentic gemstone recommendations based on your birth chart along with name corrections to remove negative blocks.',
     },
     {
       icon: <Compass className="w-5 h-5 text-rose-400" />,
       title: 'Vashikaran & Love Attraction',
+      image: '/09 - Vashikaran & Love Attraction.webp',
       desc: 'Traditional Vashikaran guidance rooted in astrological and spiritual practices. Personalized consultations are designed to help individuals address relationship concerns, improve communication, foster harmony, and gain clarity in matters of love and personal connections through time-honored wisdom.',
     },
   ];
@@ -88,13 +97,15 @@ export default function Services() {
               className="glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between overflow-hidden group"
             >
               <div>
-                {/* Service image placeholder using fav.png */}
-                <div className="relative w-full h-40 rounded-xl overflow-hidden mb-5 bg-black/45 border border-mystic-red/10 flex items-center justify-center group-hover:border-mystic-red/30 transition-all">
+                {/* Service image */}
+                <div className="relative w-full h-44 rounded-xl overflow-hidden mb-5 bg-black/45 border border-mystic-red/10 group-hover:border-mystic-red/30 transition-all">
                   <img
-                    src="/fav.png"
+                    src={service.image}
                     alt={service.title}
-                    className="w-16 h-16 object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter drop-shadow-[0_0_8px_rgba(220,38,38,0.25)]"
+                    className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
+                  {/* Subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
                 </div>
 
                 <h3 className="font-serif font-bold text-lg text-white tracking-wide">
