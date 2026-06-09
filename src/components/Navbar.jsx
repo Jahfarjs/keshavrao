@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Compass, Phone } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ currentPath = '#home' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,10 +20,22 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
+    { name: 'Blog', href: '#/blog' },
     { name: 'Black Magic Remedy', href: '#black-magic' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const isLinkActive = (href) => {
+    if (href === '#/blog') {
+      return currentPath.startsWith('#/blog');
+    }
+    // If current path starts with blog, only Blog is active
+    if (currentPath.startsWith('#/blog')) {
+      return false;
+    }
+    return currentPath === href;
+  };
 
   return (
     <>
@@ -57,15 +69,22 @@ export default function Navbar() {
 
             {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm font-medium tracking-wide text-gray-300 hover:text-mystic-red hover:translate-y-[-1px] transition-all duration-200"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const active = isLinkActive(link.href);
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className={`text-sm font-medium tracking-wide transition-all duration-200 hover:translate-y-[-1px] ${
+                      active
+                        ? 'text-mystic-red font-semibold border-b-2 border-mystic-red/50 pb-0.5'
+                        : 'text-gray-300 hover:text-mystic-red'
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
               <a
                 href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
                 target="_blank"
@@ -98,16 +117,23 @@ export default function Navbar() {
         }`}
       >
         <div className="px-4 pt-6 pb-8 space-y-4 flex flex-col items-center">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-lg font-medium text-gray-300 hover:text-mystic-red py-2 block w-full text-center transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const active = isLinkActive(link.href);
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg font-medium py-2 block w-full text-center transition-colors ${
+                  active
+                    ? 'text-mystic-red font-bold bg-mystic-red/5 rounded-lg'
+                    : 'text-gray-300 hover:text-mystic-red'
+                }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
           <a
             href="https://wa.me/919740693845?text=Hello%20Keshavrao%20Astro%20Centre%2C%20I%20would%20like%20to%20book%20an%20astrology%20consultation."
             target="_blank"
